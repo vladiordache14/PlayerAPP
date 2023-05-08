@@ -1,0 +1,147 @@
+
+<div id="ad" class="pt-3 pb-2 mb-3 border-bottom">
+  <h2 class="h2">Add Player</h2>
+</div>
+
+<form id="ad" action="#" class="form-horizontal" [formGroup]="playerForm" (ngSubmit)="submitPlayerData()" novalidate>
+  <div class="row">
+    <div class="col-lg-5 col-md-12 col-sm-12">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label>Name</label>
+          <input type="text" formControlName="name" class="form-control"  />
+
+          
+        </div>
+      </div>
+
+      <div class="col-md-12 mb-3">
+        <label>Nation image</label>
+        <input type="text" formControlName="nationImg" class="form-control" />
+      </div>
+      
+      <div class="col-md-12 mb-3">
+        <label>Player image</label>
+        <input type="text" formControlName="playerImg" class="form-control" />
+      </div>
+      
+      <div class="col-md-12 mb-3">
+        <label>Club image</label>
+        <input type="text" formControlName="clubImg" class="form-control" />
+      </div>
+
+      <div class="col-md-12 mb-3">
+        <label>Position</label>
+        <input
+          type="text"
+          formControlName="position"
+          class="form-control"
+          
+        />
+
+      
+      </div>
+      
+     
+        
+        <div class="col-md-12 mb-3">
+          <label>Rating</label>
+          <input
+            type="text"
+            formControlName="rating"
+            class="form-control"
+          />
+
+        
+        </div>
+      </div>
+        <div id="left" class="row">
+        
+        <div class="col-md-2 mb-3">
+          
+          <label>PAC</label>
+          
+          <input
+            type="text"
+            formControlName="PAC"
+            class="form-control"
+          />
+
+          
+        </div>
+
+
+        <div class="col-md-2 mb-3">
+          <label>SHO</label>
+          <input
+            type="text"
+            formControlName="SHO"
+            class="form-control"
+          />
+
+         
+          
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>PAS</label>
+          <input
+            type="text"
+            formControlName="PAS"
+            class="form-control"
+            
+          />
+
+       
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>DRI</label>
+          <input
+            type="text"
+            formControlName="DRI"
+            class="form-control"
+          />
+
+          
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>DEF</label>
+          <input
+            type="text"
+            formControlName="DEF"
+            class="form-control"
+          />
+
+       
+        </div>
+        <div class="col-md-2 mb-3">
+          <label>PHY</label>
+          <input
+            type="text"
+            formControlName="PHY"
+            class="form-control"
+          />
+
+       
+        </div>
+
+      </div>
+
+      <div class="form-group text-right">
+        <button
+          type="button"
+          class="btn btn-secondary gap-right"
+          (click)="ResetForm()"
+        >
+          Reset
+        </button>
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!playerForm.valid"
+        >
+          Add Player
+        </button>
+      </div>
+    </div>
+  
+</form>

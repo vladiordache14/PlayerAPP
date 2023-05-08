@@ -1,0 +1,88 @@
+
+	 
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" style="color:white; font-size: 60px; margin-left: 20px; margin-right: 20px;"> Fifa PLayers Manager</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarColor02">
+	   <ul class="navbar-nav mr-auto">
+		  <li class="nav-links">
+			 <a class="nav-link" (click)="onOpenModal(any, 'add')" style="font-size: 40px;">Add Player <span class="sr-only">(current)</span></a>
+			 <a class="nav-link" (click)="onOpenModal(any, 'delete')" style="font-size: 40px;">Remove Player <span class="sr-only">(current)</span></a>
+			 <a class="nav-link" (click)="onOpenModal(any, 'update')" style="font-size: 40px;">Update Player <span class="sr-only">(current)</span></a>
+
+			 <a class="nav-link" (click)="clickButton('/main-component')" style="font-size: 40px;">Main Page</a>
+			 </li>
+			 </ul>
+			
+			
+		  
+	   
+	</div>
+  </nav>
+   -->
+  <body>
+  <div class="container" id="main-container">
+  <div class="row">
+	<div *ngFor="let player of playerFromDB" class="col-md-6 col-xl-3" id="pr">
+		
+
+		 <!-- *** fut-player-card ***-->
+<div  class="fut-player-card">
+<!-- Player Card Top-->
+<div class="player-card-top">
+  <div class="player-master-info">
+	<div class="player-rating"><span>{{player.rating}}</span></div>
+	<div class="player-position"><span>{{player.position}}</span></div>
+	<div class="player-nation"><img src={{player.nationImg}} alt="Argentina" draggable="false"/></div>
+	<div class="player-club"><img src={{player.clubImg}} alt="Barcelona" draggable="false"/></div>
+  </div>
+  <div class="player-picture"><img src={{player.playerImg}} alt="Messi" draggable="false"/>
+	
+  </div>
+</div>
+<!-- Player Card Bottom-->
+<div class="player-card-bottom">
+  <div class="player-info">
+	<!-- Player Name-->
+	<div class="player-name"><span>{{player.name}}</span></div>
+	<!-- Player Features-->
+	<div class="player-features">
+	  <div class="player-features-col"><span>
+		  <div class="player-feature-value">{{player.PAC}}</div>
+		  <div class="player-feature-title">PAC</div></span><span>
+		  <div class="player-feature-value">{{player.SHO}}</div>
+		  <div class="player-feature-title">SHO</div></span><span>
+		  <div class="player-feature-value">{{player.PAS}}</div>
+		  <div class="player-feature-title">PAS</div></span></div>
+	  <div class="player-features-col"><span>
+		  <div class="player-feature-value">{{player.DRI}}</div>
+		  <div class="player-feature-title">DRI</div></span><span>
+		  <div class="player-feature-value">{{player.DEF}}</div>
+		  <div class="player-feature-title">DEF</div></span><span>
+		  <div class="player-feature-value">{{player.PHY}}</div>
+		  <div class="player-feature-title">PHY</div></span></div>
+	</div>
+  </div>
+</div>
+</div>
+
+	</div>
+  </div>
+  
+  
+
+  
+	   
+  </div>
+
+  
+  <!-- Notification for no Player -->
+  <!-- <div *ngIf="playerFromDB.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+	<h4 class="alert-heading">NO Players!</h4>
+	<p>No Player were found.</p>
+  </div>
+  </div>
+</body> -->

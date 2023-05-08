@@ -1,0 +1,158 @@
+<div
+id="edit" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1  class="h2">Edit Player Details</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group">
+      <button id="back" class="btn btn-sm btn-outline-secondary" (click)="goBack()">
+        Go Back
+      </button>
+    </div>
+  </div>
+</div>
+
+  
+    <div class="pricing-header form-block mx-auto">
+      <form id="edit" [formGroup]="editplayerForm" (ngSubmit)="updateForm()" novalidate>
+        <div class="row">
+          <div class="col-lg-5 col-md-12 col-sm-22">
+            <!-- deacici -->
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label>Name</label>
+                <input type="text" formControlName="name" class="form-control"  />
+      
+                
+              </div>
+            </div>
+      
+            <div class="col-md-12 mb-3">
+              <label>Nation image</label>
+              <input type="text" formControlName="nationImg" class="form-control" />
+            </div>
+            
+            <div class="col-md-12 mb-3">
+              <label>Player image</label>
+              <input type="text" formControlName="playerImg" class="form-control" />
+            </div>
+            
+            <div class="col-md-12 mb-3">
+              <label>Club image</label>
+              <input type="text" formControlName="clubImg" class="form-control" />
+            </div>
+      
+            <div class="col-md-12 mb-3">
+              <label>Position</label>
+              <input
+                type="text"
+                formControlName="position"
+                class="form-control"
+                
+              />
+      
+            
+            </div>
+            
+           
+              
+              <div class="col-md-12 mb-3">
+                <label>Rating</label>
+                <input
+                  type="text"
+                  formControlName="rating"
+                  class="form-control"
+                  
+                />
+      
+              
+              </div>
+            </div>
+              <div id="left" class="row">
+              
+              <div class="col-md-2 mb-3">
+                
+                <label>PAC</label>
+                
+                <input
+                  type="text"
+                  formControlName="PAC"
+                  class="form-control"
+                  
+                />
+      
+                
+              </div>
+      
+      
+              <div class="col-md-2 mb-3">
+                <label>SHO</label>
+                <input
+                  type="text"
+                  formControlName="SHO"
+                  class="form-control"
+                  
+                />
+      
+               
+                
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>PAS</label>
+                <input
+                  type="text"
+                  formControlName="PAS"
+                  class="form-control"
+                  
+                />
+      
+             
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>DRI</label>
+                <input
+                  type="text"
+                  formControlName="DRI"
+                  class="form-control"
+                  
+                />
+      
+                
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>DEF</label>
+                <input
+                  type="text"
+                  formControlName="DEF"
+                  class="form-control"
+                  
+                />
+      
+             
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>PHY</label>
+                <input
+                  type="text"
+                  formControlName="PHY"
+                  class="form-control"
+                  
+                />
+      
+             
+              </div>
+      
+            </div>
+            <!-- panaaici -->
+            <div class="form-group text-right">
+              <button
+                type="submit"
+                class="btn btn-success btn-block"
+                [disabled]="!editplayerForm.valid"
+              >
+                Update Player
+              </button>
+            </div>
+          
+        </div>
+      </form>
+    </div>
